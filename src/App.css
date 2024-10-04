@@ -79,7 +79,6 @@ body::-webkit-scrollbar {
 
 /* Main Content Styles */
 main {
-  background: url('../assets/wave-haikei.png') no-repeat center center;
   background-size:auto; /* Ensures the background covers the entire home container */
   padding: 2rem;
   display: flex;

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/home.css';
-import arrow from '../../assets/arrowright.png';
+import arrow from '../../src/assets/arrowright.png';
 
 function Home() {
     return (
