@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <header className="header">
-        <div className="logo">React-comp</div>
+        <div className="logo">React-Comp</div>
         <nav>
           <ul className="nav">
             <li className="nav-item"><Link to="/">Home</Link></li>

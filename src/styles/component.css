@@ -5,13 +5,13 @@
   
   .sidebar {
     width: 250px; /* Fixed width for the sidebar */
-    background-color: #f4f4f4; /* Light background */
+    background-color: var(--primarycolor);
     padding: 20px; /* Padding around the sidebar */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     position: fixed; /* Make the sidebar fixed */
     left: 0; /* Align it to the left */
-    top: 0; /* Start from the top */
+    top: 80px; /* Start from the top */
     bottom: 0; /* Extend to the bottom */
+    font-size: x-large;
   }
   
   .sidebar h2 {
@@ -25,16 +25,22 @@
   
   .sidebar li {
     padding: 10px; /* Padding for each list item */
+    border-radius: 10px;
     cursor: pointer; /* Change cursor to pointer */
     transition: background-color 0.3s; /* Smooth transition for hover */
   }
-  
+  .sidebar li.selected {
+    background-color: var(--primarydarkcolor); /* Change to your preferred highlight color */
+    color: white; /* Change text color for better contrast */
+  }
   .sidebar li:hover {
-    background-color: #e2e2e2; /* Change background on hover */
+    padding: auto;
+    background-color: var(--primarydarkcolor); /* Change background on hover */
   }
   
   .main-content {
     flex-grow: 1; /* Take up remaining space */
+    background-color: var(--primarydarkcolor);
     margin-left: 250px; /* Leave space for the sidebar */
     padding: 20px; /* Padding around the main content */
   }
