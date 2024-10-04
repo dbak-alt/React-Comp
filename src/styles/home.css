@@ -22,6 +22,9 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 .react-comp {
     color: var(--contrastcolor); /* Change this to any color you prefer */
@@ -32,4 +35,14 @@
 /* Add hover effect for the button */
 .cta-button:hover {
     background-color: var(--primarydarkcolor); /* Darker shade for hover */
+}
+
+.arrow-icon{
+    height: 30px;
+    width: 30px;
+}
+
+.start-button-text{
+    font-size: large;
+    font-weight: 400;
 }

@@ -16,8 +16,19 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/, // Add this rule to process CSS files
-        use: ['style-loader', 'css-loader'], // Use style-loader and css-loader
+        test: /\.css$/, // For processing CSS files
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i, // For processing image files
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]', // Maintain original name and path
+            },
+          },
+        ],
       },
     ],
   },
