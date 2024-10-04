@@ -1,0 +1,35 @@
+/* home.css */
+
+/* General home page styles */
+.home {
+    background-color: var(--primarycolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap:80px;
+    text-align: center;
+}
+
+/* Call to Action button styles */
+.cta-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 60px;
+    background-color: var(--contrastcolor); /* React branding color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.react-comp {
+    color: var(--contrastcolor); /* Change this to any color you prefer */
+    font-weight: 700; /* Optional: make it bold */
+  }
+
+
+/* Add hover effect for the button */
+.cta-button:hover {
+    background-color: var(--primarydarkcolor); /* Darker shade for hover */
+}

@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&display=swap');
+
+/* Basic Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --contrastcolor: #FF7D81;
+  --primarycolor:#004F57;
+  --primarydarkcolor:#05353A;
+  --textcolor:white;
+  --textdarkcolor:black;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Josefin Slab', serif; /* Use Josefin Slab font */
+  color: var(--textcolor); /* Dark text for readability */
+  background-color: var(--primarycolor);
+  line-height: 1.6; /* Improved readability */
+  height: 100vh; /* Make sure body takes full height of the viewport */
+  overflow: hidden; /* Hide overflow to prevent scroll bars */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header Styles */
+.header {
+  background-color: var(--contrastcolor);
+  color: var(--textdarkcolor);
+  padding: 10px 20px;
+  display: flex;
+  font-size: larger;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px; /* Set height of the header */
+  position: fixed; /* Makes the header stick to the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for the header */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation Styles */
+.nav {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav-item a {
+  color: var(--textdarkcolor); /* Link text color */
+  text-decoration: none; /* Remove underline from links */
+  padding: 0.5rem 1rem; /* Add padding for clickable area */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.nav-item a:hover {
+  background-color: #61dafb; /* Light blue on hover */
+  color: #282c34; /* Dark text on hover */
+}
+
+/* Main Content Styles */
+main {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: calc(100vh - 60px); /* Make main content fill remaining height */
+  margin-top: 60px; /* Offset content to account for the header */
+  overflow-y: auto; /* Enable vertical scrolling for the main content */
 }
 
-.App-link {
-  color: #61dafb;
+/* Section Styles for Main Content */
+h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  font-size: 2.2rem;
+  max-width: 80%; /* Limit paragraph width for readability */
+  text-align: center; /* Center align text */
+}
+
+
+
+/* Utility Classes */
+.container {
+  max-width: 1200px; /* Limit max width for larger screens */
+  margin: 0 auto; /* Center align container */
+  padding: 0 2rem; /* Padding for inner content */
 }

@@ -1,0 +1,33 @@
+.docs-container {
+    display: flex;
+    margin: auto;
+    background-color: blue;
+  }
+  
+  .main-content {
+    padding: 20px; /* Padding around the main content */
+    background-color: #ffffff; /* White background for contrast */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+  }
+  
+  .main-content h2 {
+    font-size: 28px; /* Font size for section headers */
+    margin-bottom: 10px; /* Space below the section header */
+  }
+  
+  .main-content p {
+    line-height: 1.6; /* Improved line height for readability */
+    margin-bottom: 15px; /* Space below paragraphs */
+  }
+  
+  .code-block {
+    background-color: #000; /* Black background for code blocks */
+    color: #fff; /* White text for code blocks */
+    padding: 10px; /* Padding for code blocks */
+    border-radius: 5px; /* Rounded corners */
+    overflow-x: auto; /* Allow horizontal scroll for overflow */
+    margin-bottom: 20px; /* Space below code blocks */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+    white-space: pre; /* Preserve whitespace for code formatting */
+  }
+  
