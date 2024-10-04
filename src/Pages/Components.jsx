@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/component.css'; // Import your CSS file for styling
-import ButtonExample from '../Examples/ButtonExample';
 import LoadBarExample from '../Examples/LoadBarExample';
 import Button from '../Components/Button';
 
@@ -29,9 +28,8 @@ const componentList = [
 ];
 
 function Components() {
-  const [selectedComponent, setSelectedComponent] = useState(componentList[0]); // Default to the first component
   const [expandedIndex, setExpandedIndex] = useState(null); // Track which component is expanded
-  const [selectedSubOption, setSelectedSubOption] = useState(selectedComponent.subOptions[0]); // Default to the first sub-option
+  const [selectedSubOption, setSelectedSubOption] = useState(componentList[0].subOptions[0]); // Default to the first sub-option
 
   const toggleExpand = (index) => {
     if (expandedIndex === index) {
@@ -61,7 +59,7 @@ function Components() {
         <ul>
           {componentList.map((component, index) => (
             <li key={index}>
-              <div onClick={() => toggleExpand(index)} className={selectedComponent.name === component.name ? 'selected' : ''}>
+              <div onClick={() => toggleExpand(index)} className={componentList[0].name === component.name ? 'selected' : ''}>
                 {component.name}
               </div>
               {expandedIndex === index && (
