@@ -2,3 +2,10 @@
     height: 100%;
 
 }
+
+.colorbuttondiv{
+    display: flex;
+    align-items: center;
+    gap:50px;
+    padding:20px
+}

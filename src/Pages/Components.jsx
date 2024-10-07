@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/component.css'; // Import your CSS file for styling
 import LoadBarExample from '../Examples/LoadBarExample';
 import Button from '../Components/Button';
+import ButtonExample from '../Examples/ButtonExample';
 
 const componentList = [
   {
@@ -11,7 +12,7 @@ const componentList = [
     subOptions: [
       { name: 'About', content: 'The Button component is a versatile UI element...' },
       { name: 'Props', content: 'label: string, onClick: function...' },
-      { name: 'Example', content: <Button label="Click Me" onClick={() => alert('Button clicked!')} /> },
+      { name: 'Example', content:<ButtonExample/> },
     ],
   },
   {
